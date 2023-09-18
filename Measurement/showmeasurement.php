@@ -6,7 +6,7 @@ header("content-type:application/json");
 if(isset($_POST['userId']))
 {
     $userId = $_POST['userId'];
-    $pant = "SELECT * FROM measurement WHERE user_id = '$userId' ORDER BY id DESC LIMIT 1";
+    $pant = "SELECT * FROM measurement WHERE user_id = '$userId' ORDER BY id DESC";
     $result = mysqli_query($con,$pant);
 
     if (mysqli_num_rows($result)>0) {
